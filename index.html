@@ -40,19 +40,16 @@
             padding: 0;
             height: 100%;
         }
-        .parent-container {
-            position: relative; /* Required so the child maps to this container */
-            min-height: 300px;
-            border: 2px solid #ccc;
-        }
 
         .game {
             position: absolute;
             bottom: -35%; /* Sticks it to the bottom edge */
             left: 50%; /* Moves its left edge to the middle of the parent */
             transform: translateX(-50%); /* Pulls it back by half its own width */
-            background-color: aqua;
-            padding: 10px;
+            background-color: #FFFFFF; /* Optional: Adds a color to the empty side bars */
+            padding: 0;
+            margin: 0;
+            border:none;
         }
         .background-container {
             background-image: url('images/kylelyn.png');
@@ -89,13 +86,11 @@
     <p id="invitedtext">YOU'RE INVITED!</p>
     <div class="background-container">
     </div>
-    <div class="game-container">
-        <iframe class="game"
+    <iframe class="game"
                 src="game/index.html"
-                width="720"
-                height="480">
+                width="740"
+                height="500">
         </iframe>
-    </div>
     
     <form class="rsvp-details">
         <p> Details: </p>
