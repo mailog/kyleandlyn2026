@@ -49,7 +49,9 @@
             background-color: #FFFFFF; /* Optional: Adds a color to the empty side bars */
             padding: 0;
             margin: 0;
-            border:none;
+            border: none;
+            width: 650px;
+            height: 403px;
         }
         .background-container {
             background-image: url('images/kylelyn.png');
@@ -73,7 +75,7 @@
             margin-top: 0.5%;
         }
 
-        .rsvp-details
+        #rsvp-details
         {
             position: absolute;
             left: 75%;
@@ -88,17 +90,38 @@
     <div class="background-container">
     </div>
     <iframe class="game"
-                src="game/index.html"
-                width="650"
-                height="403">
-        </iframe>
-    
-    <form class="rsvp-details">
+            src="game/index.html">
+    </iframe>
+
+    <form id="rsvp-details">
         <p> Details: </p>
-        <label for="fname">First name:</label><br>
-        <input type="text" id="fname" name="fname"><br>
-        <label for="lname">Last name:</label><br>
-        <input type="text" id="lname" name="lname">
+        <label>First name:</label><br>
+        <input type="text" name="firstname"><br>
+        <label>Last name:</label><br>
+        <input type="text" name="lastname"><br><br>
+        <button type="submit">Submit Data</button>
+        <p id="responseMessage">-</p>
     </form>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxEm31yzUd-to70GD4k910NY1RyoyefP7Re9xXRLu_EHTzDIvRgEWI9UklnD67SogKIlg/exec';
+        const form = document.getElementById('rsvp-details');
+        const responseMessage = document.getElementById('responseMessage');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault(); // Stop default form redirect page behavior
+            responseMessage.innerHTML = "Submitting...";
+
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    responseMessage.innerHTML = "Data successfully sent to Google Sheets!";
+                    form.reset();
+                })
+                .catch(error => {
+                    responseMessage.innerHTML = "An error occurred. Please try again.";
+                    console.error('Error!', error.message);
+                });
+        });
+    </script>
 </body>
 </html>
