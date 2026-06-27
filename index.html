@@ -11,74 +11,147 @@
         }
         @media (orientation: landscape) {
             body {
-                overflow: hidden; /* Prevents unwanted scrollbars */
+                overflow-x: hidden; 
+
             }
 
             html, body {
                 margin: 0;
                 padding: 0;
                 height: 100%;
+                background-color: #fdfaef;
             }
 
 
             .game {
                 position: absolute;
-                bottom: 0%;
-                left: 50%;
-                transform: translateX(-50%);
                 background-color: #FFFFFF;
                 padding: 0;
                 margin: 0;
-                margin-left: 20%;
-                margin-bottom: 1%;
                 border: none;
                 width: 50%;
                 aspect-ratio: 16/9;
-                z-index:-1;
+                z-index: 0;
+                left: 0%;
+                top: 45%;
             }
 
-            .background-container {
+
+            .main-container {
                 position: absolute;
-                top: 5%;
+                width: 100%;
+                height: 100%;
+                left: 10%;
+                /*position: absolute;
                 background-image: url('images/kylelyn.png');
                 background-position: left center;
                 background-size: contain;
                 background-repeat: no-repeat;
+                top: -5%;
+                height: 110%;
                 width: 100%;
-                height: 100vh;
                 margin: 0;
                 margin-left: 5%;
-                z-index: -1;
+                z-index: 0;
+                padding: 0;*/
             }
 
-            #invitedtext {
-                font-family: 'GreatVibes', 'Brush Script MT';
-                top: 10%;
-                text-align: left;
+            #kylelyn
+            {
                 width: 50%;
-                margin-inline: auto;
-                font-size: 6vh;
+                height: auto;
+            }
+
+            #rsvp {
+                font-family: Garamond;
+                text-align: center;
+                margin: 0;
+                font-size: 4vh;
                 font-weight: bold;
-                margin-bottom: 0%;
-                margin-top: 0.5%;
-                margin-left: 17.5%;
+                margin-top: 1%;
             }
 
             #rsvp-details {
-                position: absolute;
-                width: 50vw;
-                margin: 0 auto;
-                margin-top: -20vh;
-                margin-left: 75%;
-                z-index: 100;
+                font-family: Garamond;
+                width: 100%;
+                margin: 3%;
+                margin-top: 10%;
             }
 
-            #weddingdetails
-            {
-                margin-top: -1%;
+            #weddingdetails {
+                position: absolute;
+                top: 1%;
                 width: 25%;
-                margin-left: 45%;
-                font-size: 24px;
+                margin-left: 50%;
+                font-size: 3vh;
+                color: #a78e1f;
+            }
+
+            #invitation {
+                font-family: Garamond;
+                font: bold;
+                color: #000000;
+                font-size: 4vh;
+                text-align: center;
+                margin: 3%;
+            }
+
+            #names {
+                font-family: 'GreatVibes', 'Brush Script MT';
+                font-size: 10vh;
+                text-align: center;
+                width: 100%;
+                margin: 10%;
+                margin-left: 0;
+            }
+
+            #date {
+                font-family: Garamond;
+                font-weight: bold;
+                margin: 3%;
+                text-align: center;
+            }
+
+            #location {
+                font-family: Garamond;
+                font-weight: bold;
+                color: #000000;
+                width: 100%;
+                text-align: center;
+                margin: 3%;
+            }
+
+            .forminput {
+                font-family: Garamond;
+                width: 80%;
+                height: 2.5vh;
+                margin-left: 10%;
+            }
+
+            #rsvpdate {
+                font-family: Garamond;
+                font-weight: bold;
+                margin: 3%;
+                text-align: center;
+            }
+
+            #submitbutton {
+                font-family: Garamond;
+                font-weight: bold;
+                font-size: 4vh;
+                margin: 3%;
+                text-align: center;
+                width: 50%;
+                height: 5vh;
+                margin-left: 25%;
+                border-color: #f1e9d2;
+                background-color: #f1e9d2;
+            }
+
+            #responseMessage {
+                font-family: Garamond;
+                margin: 3%;
+                text-align: center;
             }
         }
 
@@ -105,7 +178,7 @@
                 border: none;
                 width: 90%;
                 aspect-ratio: 16/9;
-                z-index: -1;
+                z-index: 0;
             }
 
             .background-container {
@@ -118,7 +191,7 @@
                 width: 100%;
                 height: 70vh;
                 margin: 0;
-                z-index: -1;
+                z-index: 0;
             }
 
             #invitedtext {
@@ -141,23 +214,28 @@
     </style>
 </head>
 <body>
-    <div class="background-container">
+    <div class="main-container">
+        <img id="kylelyn" src="images/kylelyn.png" />
+        <iframe class="game"
+                src="game/index.html">
+        </iframe>
+
+        <div id="weddingdetails">
+            <p id="rsvp">RSVP</p>
+            <p id="invitation">We would be delighted if you could celebrate with us at</p>
+            <p id="names">Kyle & Lyn's Wedding</p>
+            <p id="date">SEPTEMBER 22, 2026 | 5:00 PM </p>
+            <p id="location">Batou Church, Catanduanes, Philippines</p>
+            <form id="rsvp-details">
+                <p id="rsvpdate"> Please RSVP by August 15th </p>
+                <input class="forminput"type="text" name="name" placeholder="Name"><br>
+                <input class="forminput"type="text" name="guests" placeholder="Number of Guests"><br>
+                <input class="forminput"type="text" name="email"placeholder="Email"><br>
+                <button id ="submitbutton" type="submit">Send</button>
+                <p id="responseMessage">---</p>
+            </form>
+        </div>
     </div>
-    <p id="invitedtext">Kyle & Lyn</p>
-    <p id="weddingdetails">We kindly invite you to our wedding. Here are the details . . . Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p><form id="rsvp-details">
-        <p> Kindly Respond </p>
-        <label>Name</label><br>
-        <input type="text" name="name"><br>
-        <label>Number of Guests</label><br>
-        <input type="text" name="guests"><br>
-        <label>Email</label><br>
-        <input type="text" name="email"><br><br>
-        <button type="submit">Submit</button>
-        <p id="responseMessage">-</p>
-    </form>
-    <iframe class="game"
-            src="game/index.html">
-    </iframe>
 
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbxEm31yzUd-to70GD4k910NY1RyoyefP7Re9xXRLu_EHTzDIvRgEWI9UklnD67SogKIlg/exec';
