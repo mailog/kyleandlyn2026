@@ -11,30 +11,17 @@
         }
         @media (orientation: landscape) {
             body {
-                overflow-x: hidden; 
-
+                overflow-x: hidden;
+                background-color: #fafafa;
             }
 
             html, body {
                 margin: 0;
                 padding: 0;
                 height: 100%;
-                background-color: #fdfaef;
+                /*background-color: #fdfaef;*/
             }
 
-
-            .game {
-                position: absolute;
-                background-color: #FFFFFF;
-                padding: 0;
-                margin: 0;
-                border: none;
-                width: 45%;
-                aspect-ratio: 16/9;
-                z-index: 0;
-                left: 2.5%;
-                top: 45%;
-            }
 
 
             .main-container {
@@ -60,6 +47,7 @@
             {
                 width: 40%;
                 height: auto;
+                z-index: 2;
             }
 
             #rsvp {
@@ -74,41 +62,59 @@
             #rsvp-details {
                 font-family: Garamond;
                 width: 100%;
-                margin: 3%;
-                margin-top: 5%;
+                margin: 0%;
+            }
+
+
+            .game {
+                position: absolute;
+                top: 42.5%;
+                background-color: #FFFFFF;
+                padding: 0;
+                margin: 0;
+                border: none;
+                width: 45%;
+                aspect-ratio: 16/9;
+                z-index: 0;
+                margin-left: 2.5%;
             }
 
             #weddingdetails {
+                left: 0%;
+                top: 42.5%;
                 position: absolute;
-                top: 1%;
                 width: 40%;
-                margin-left: 50%;
+                height: auto;
                 font-size: 1.5rem;
-                color: #a78e1f;
+                color: #8D5EB7;
+                background-color: #FFFFFFBF;
+                border-radius: 12px;
+                border-color: #8D5EB7;
+                border-width: 1px;
+                border-style: ridge;
+                padding: 0;
             }
 
             #invitation {
                 font-family: Garamond;
                 font: bold;
                 color: #000000;
-                font-size: 1.75rem;
+                font-size: 1.5rem;
                 text-align: center;
                 margin: 3%;
             }
 
             #names {
                 font-family: 'GreatVibes', 'Brush Script MT';
-                font-size: 4rem;
+                font-size: 3rem;
                 text-align: center;
-                width: 100%;
-                margin: 10%;
-                margin-left: 0;
+                margin: 0;
             }
 
             #date {
                 font-family: Garamond;
                 font-weight: bold;
-                margin: 3%;
+                margin: 0%;
                 text-align: center;
             }
 
@@ -118,53 +124,81 @@
                 color: #000000;
                 width: 100%;
                 text-align: center;
-                margin: 3%;
+                margin: 0%;
+                font-size: 1.4rem;
             }
 
             .forminput {
                 font-family: Garamond;
-                width: 80%;
+                width: 60%;
                 height: 1.25rem;
-                margin-left: 10%;
+                margin-left: 20%;
             }
 
             #rsvpdate {
                 font-family: Garamond;
                 font-weight: bold;
-                margin: 3%;
+                margin: 0.5%;
                 text-align: center;
+                font-size: 1rem;
             }
 
             #submitbutton {
                 font-family: Garamond;
                 font-weight: bold;
-                font-size: 2rem;
-                margin: 3%;
+                font-size: 1.5rem;
+                margin: 1%;
                 text-align: center;
-                width: 50%;
-                height: 2.5rem;
-                margin-left: 25%;
-                border-color: #f1e9d2;
-                background-color: #f1e9d2;
+                width: 30%;
+                height: 2rem;
+                margin-left: 35%;
+                border-color: #E6E6FA;
+                background-color: #E6E6FA;
             }
 
             #responseMessage {
                 font-family: Garamond;
                 margin: 0%;
                 text-align: center;
+                font-size: 1rem;
             }
+
+            #flowers {
+                background-image: url('images/flowers.png');
+                background-repeat: repeat-x;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 0%;
+                padding: 0;
+                margin: 0;
+            }
+
+            /*#arch {
+                background-image: url('images/arch.jpg');
+                background-repeat: repeat-x;
+                width: 50%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                padding: 0;
+                margin: 0;
+                background-size: cover;
+                background-position: center; 
+                background-repeat: no-repeat;
+            }*/
         }
 
         @media (orientation: portrait) {
             body {
                 overflow-x: hidden;
+                background-color: #fafafa;
             }
 
             html, body {
                 margin: 0;
                 padding: 0;
                 height: 100%;
-                background-color: #fdfaef;
             }
 
 
@@ -175,7 +209,8 @@
                 padding: 0;
                 margin: 0;
                 border: none;
-                width: 100%;
+                width: 75%;
+                margin-left: 12.5%;
                 aspect-ratio: 16 / 9;
                 z-index: 0;
                 left: 0;
@@ -186,15 +221,15 @@
                 position: absolute;
                 width: 100%;
                 height: 100%;
-                left: 10%;
+                left: 0%;
             }
 
             #kylelyn {
                 position:fixed;
-                width: 80%;
+                width: 70%;
                 height: auto;
-                left: 10%;
-                top: 32.5%;
+                left: 15%;
+                top: 2.5%;
             }
 
             #rsvp {
@@ -209,17 +244,22 @@
             #rsvp-details {
                 font-family: Garamond;
                 width: 100%;
-                margin: 3%;
-                margin-top: 1%;
             }
 
             #weddingdetails {
-                position: fixed;
-                top: 0%;
-                width: 100%;
-                left: 0;
-                font-size: 0.75rem;
-                color: #a78e1f;
+                position: absolute;
+                left: 15%;
+                top: 27.5%;
+                width: 70%;
+                height: auto;
+                font-size: 1.5rem;
+                color: #8D5EB7;
+                background-color: #FFFFFFBF;
+                border-radius: 12px;
+                border-color: #8D5EB7;
+                border-width: 1px;
+                border-style: ridge;
+                margin: 0;
             }
 
             #invitation {
@@ -236,7 +276,7 @@
                 font-size: 1.75rem;
                 text-align: center;
                 width: 100%;
-                margin: 2.5%;
+                margin: 1.5%;
                 margin-left: 0;
             }
 
@@ -245,6 +285,7 @@
                 font-weight: bold;
                 margin: 1%;
                 text-align: center;
+                font-size: 1rem;
             }
 
             #location {
@@ -254,13 +295,17 @@
                 width: 100%;
                 text-align: center;
                 margin: 1%;
+                font-size: 0.9rem;
             }
 
             .forminput {
                 font-family: Garamond;
                 width: 60%;
                 height: 0.75rem;
+                margin: 0;
                 margin-left: 20%;
+                display:flex;
+                gap: 0;
             }
 
             #rsvpdate {
@@ -268,30 +313,48 @@
                 font-weight: bold;
                 margin: 0%;
                 text-align: center;
+                font-size: 0.8rem;
             }
 
             #submitbutton {
                 font-family: Garamond;
                 font-weight: bold;
                 font-size: 1rem;
-                margin: 1%;
                 text-align: center;
-                width: 20%;
-                height: 1.5rem;
-                margin-left: 40%;
-                border-color: #f1e9d2;
-                background-color: #f1e9d2;
+                width: 30%;
+                height: 1.35rem;
+                margin-left: 35%;
+                border-color: #E6E6FA;
+                background-color: #E6E6FA;
             }
 
             #responseMessage {
                 font-family: Garamond;
-                margin: 1%;
+                margin: 0%;
                 text-align: center;
+                font-size: 0.75rem;
+            }
+
+            #flowers {
+                background-image: url('images/flowers.png');
+                background-repeat: repeat-x;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                padding: 0;
+                margin: 0;
+                /*background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;*/
             }
         }
     </style>
 </head>
 <body>
+    <div id="flowers"></div>
+    <div id="arch"></div>
     <div class="main-container">
         <img id="kylelyn" src="images/kylelyn.png" />
         <iframe class="game"
@@ -300,23 +363,25 @@
 
         <div id="weddingdetails">
             <p id="rsvp">RSVP</p>
-            <p id="invitation">We would be delighted if you could celebrate with us at</p>
+            <!--<p id="invitation">We would be delighted if you could celebrate with us at</p>-->
             <p id="names">Kyle & Lyn's Wedding</p>
             <p id="date">SEPTEMBER 22, 2026 | 5:00 PM </p>
-            <p id="location">Batou Church, Catanduanes, Philippines</p>
+            <p id="location">St. John the Baptist Church, Bato, Catanduanes, Philippines</p>
             <form id="rsvp-details">
-                <p id="rsvpdate"> Please RSVP by August 15th </p>
-                <input class="forminput"type="text" name="name" placeholder="Name"><br>
-                <input class="forminput"type="text" name="guests" placeholder="Number of Guests"><br>
-                <input class="forminput"type="text" name="email"placeholder="Email"><br>
-                <button id ="submitbutton" type="submit">Send</button>
+                <p id="rsvpdate">Please respond to this RSVP by August the 22nd</p>
+                <input class="forminput" type="text" name="name" placeholder="Name" maxlength="50" required pattern="[A-Za-z\s'-]{1,100}">
+                <input class="forminput" type="number" name="guests" placeholder="Number of Guests" maxlength="50" required pattern="[A-Za-z\s'-]{1,100}">
+                <input class="forminput" type="email" name="email" placeholder="Email" maxlength="50" required>
+                <input class="forminput" type="tel" name="phonenumber" placeholder="Phone Number" maxlength="15" required pattern="[A-Za-z\s'-]{1,100}">
+                <input class="forminput" type="text" name="allergies" placeholder="Food Allergies" maxlength="50" pattern="[A-Za-z\s'-]{1,100}">
+                <button id="submitbutton" type="submit">Send</button>
                 <p id="responseMessage">---</p>
             </form>
         </div>
     </div>
 
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbxEm31yzUd-to70GD4k910NY1RyoyefP7Re9xXRLu_EHTzDIvRgEWI9UklnD67SogKIlg/exec';
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyvPKfb4tKdz0eCJqcuGAEt5bWSansD7bpz1nyRrIbopTwCdlosjtO7p74wC3wClnDA/exec';
         const form = document.getElementById('rsvp-details');
         const responseMessage = document.getElementById('responseMessage');
 
@@ -326,6 +391,8 @@
 
             fetch(scriptURL, { method: 'POST', body: new FormData(form) })
                 .then(response => {
+                    const button = document.getElementById("submitbutton");
+                    button.disabled = true;
                     responseMessage.innerHTML = "Info received!";
                     form.reset();
                 })
