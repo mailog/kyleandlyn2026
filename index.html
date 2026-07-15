@@ -9,6 +9,38 @@
             font-family: 'GreatVibes';
             src: url('fonts/GreatVibes-Regular.ttf') format('truetype');
         }
+        /* 1. Cover the entire screen with a white element */
+        #whitescreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+            z-index: 9999; /* Ensures it stays on top of everything */
+            opacity: 1;
+            /* 2. Link the animation properties */
+            animation: fadeToTransparent 1.5s ease-in-out forwards;
+            pointer-events: none; /* Allows user clicks to pass through while fading */
+        }
+
+        /* 3. Define the keyframes for fading out the white screen */
+        @keyframes fadeToTransparent {
+            0% {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            99% {
+                opacity: 0;
+                visibility: visible;
+            }
+
+            100% {
+                opacity: 0;
+                visibility: hidden; /* Removes the element from interactions completely */
+            }
+        }
         @media (orientation: landscape) {
             body {
                 overflow-x: hidden;
@@ -378,6 +410,7 @@
                 <p id="responseMessage">---</p>
             </form>
         </div>
+        <div id="whitescreen"></div>
     </div>
 
     <script>
